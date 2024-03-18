@@ -1,0 +1,203 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url(img/fondo3.jpeg) no-repeat center top;
+  background-size: cover;
+  font-family: sans-serif;
+  height: 200vh;
+}
+
+.header {
+  text-align: center;
+  height: 300px;
+  padding: 12px;
+  background-image: url("https://media.istockphoto.com/photos/abstract-blue-background-picture-id840173468?k=20&m=840173468&s=612x612&w=0&h=VEMJFUmVudjILjUb6NkmIA5xLhVA4DTgajSKFpw6PKo=");
+  background-size: cover;
+}
+
+#todo {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.navbar {
+  border-radius: 10px;
+  margin: 20px;
+  padding: 15px;
+}
+
+.navbar {
+  background-color: #A7D43B;
+}
+
+#Empresas {
+  margin-left: 100px;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.name {
+  text-align: center;
+  margin-top: 14px;
+  color: white;
+}
+
+.contacts {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.contacts li {
+  display: inline-block;
+  margin: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: #ad0000;
+}
+
+a:hover {
+  color: #213bcf;
+}
+
+.correo {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-size: cover;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/281/281769.png");
+}
+
+.facebook {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-size: cover;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/145/145802.png");
+}
+
+.instagram {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-size: cover;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/2111/2111463.png");
+}
+
+.telefono {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-size: cover;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/724/724664.png");
+}
+
+.acerca {
+  padding: 10px;
+  border: 1px solid rgb(173, 172, 172);
+  background-color: rgb(192, 189, 189);
+}
+
+.acerca h3 {
+  color: black;
+  font-size: 16px;
+}
+
+.acerca p {
+  color: black;
+  font-size: 14px;
+}
+
+table,
+thead,
+th {
+  /* border: 1px solid #000000; */
+  /* border-collapse: collapse; */
+  padding: 10px;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+table,
+tbody,
+tr,
+td {
+  /* border: 1px solid #000000; */
+  padding: 10px;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  width: 14%;
+  color: black;
+  font-weight: bold;
+}
+
+#Calendario {
+  margin-left: 100px;
+  border-collapse: collapse;
+  border-radius: 50px 50px 16px 16px;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+.td_head {
+  border-bottom: 1px solid black;
+}
+
+.td_ed {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.td_ed:last-child {
+  border-right: 0px;
+}
+
+.bo_last {
+  border-bottom: 0px;
+}
+
+.ACitas {
+  text-align: right;
+  height: 300px;
+  margin: 0 0 0 700px;
+  padding: 12px;
+}
+
+button {
+  color: #FFFFFF;
+  border: none;
+  background: #4CAF50;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+button:active {
+  background-color: #3e8e41;
+  transform: translateY(4px);
+}
+
+#Icono {
+  box-shadow: 10px 10px 10px #FFFFFF;
+  height: 300px;
+}
+
+#adios {
+  float: right;
+  text-align: right;
+  color: black;
+}
+
+.navbar-nav {
+  text-justify: auto;
+  text-align: center;
+  align-items: center;
+}
