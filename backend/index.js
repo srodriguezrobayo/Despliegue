@@ -20,6 +20,7 @@ const PUERTO = 3100
 const conexion = mysql.createConnection(
     {
         host:'bxj8zacvd1keambgbsos-mysql.services.clever-cloud.com',
+        port: 3306,
         database:'bxj8zacvd1keambgbsos',
         user:'ujxchykgmuctsrgn',
         password:'oXPHrbSHUAYS6YBaVaUO'
