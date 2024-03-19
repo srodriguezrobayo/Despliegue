@@ -13,7 +13,7 @@ import { catchError } from 'rxjs';
 })
 export class AccionesService {
 
-  public BASE_URL = "https://despliegue-backend-7h6l.onrender.com"
+  public BASE_URL = "http://localhost:3100"
 
   constructor(private http: HttpClient) { }
 

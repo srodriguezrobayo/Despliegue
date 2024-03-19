@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
 .root {
     --clr-main:#4b33a8;
     --clr-white:#ececec;
@@ -7,6 +8,7 @@
     --clr-green:#79c20c;
     --clr-black:#222;
 }
+
 .asterisco {
     margin: 0;
     padding: 0;
@@ -17,17 +19,21 @@ h1,h2,h3,h4,h5,h6,p,a,input,textarea,ul {
     margin: 0;
     padding: 0;
 }
+
 ul{
     list-style-type: none;
 }
+
 a {
     text-decoration: none;
 }
+
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 4fr;
     background-color: var(--clr-green);
 }
+
 aside{
     padding: 2rem;
     padding-right: 0;
@@ -39,15 +45,18 @@ aside{
     flex-direction: column;
     justify-content: space-between;
 }
+
 .logo {
     font-weight: 400;
     font-size: 1.3rem;
 }
+
 .menu{
     display: flex;
     flex-direction: column;
     gap: .5rem;
 }
+
 .boton-menu{
     background-color: transparent;
     border: 0;
@@ -59,6 +68,7 @@ aside{
     font-weight: 600;
     padding: 1rem;
 }
+
 .boton-menu.active{
     background-color: var(--clr-white);
     color: var(--clr-green);
@@ -67,6 +77,7 @@ aside{
     border-bottom-left-radius: 1rem;
     position: relative;
 }
+
 .boton-menu.active::before{
     content: '';
     position: absolute;
@@ -78,6 +89,7 @@ aside{
     border-bottom-right-radius: .5rem;
     box-shadow: 0 1rem 0 var(--clr-white);
 }
+
 .boton-menu.active::after{
     content: '';
     position: absolute;
@@ -89,44 +101,53 @@ aside{
     border-top-right-radius: .5rem;
     box-shadow: 0 -1rem 0 var(--clr-white);
 }
+
 .bi-hand-index-thumb-fill,
 .bi-hand-index-thumb{
     transform: rotateZ(90deg);
 }
+
 .numerito{
     background-color: var(--clr-white);
     color: var(--clr-green);
     padding: .15rem .25rem;
     border-radius: .25rem;
 }
+
 .boton-carrito.active .numerito{
     background-color: var(--clr-green);
     color: var(--clr-white);
 }
+
 .texto-footer {
     color: gray;
     font-size: 85rem;
 }
+
 main{
     margin: 1rem;
     margin-left: 0;
     border-radius: 2rem;
     padding: 3rem;
 }
+
 .titulo-principal{
     color: var(--clr-black);
     margin-bottom: 2rem;
 }
+
 .contenedor-productos{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
+
 .producto-imagen {
     max-width: 100%;
     border-radius: 1rem;
     
 }
+
 .producto-detalles {
     background-color: var(--clr-green);
     color: var(--clr-white);
@@ -138,9 +159,11 @@ main{
     flex-direction: column;
     gap: .25rem;
 }
+
 .producto-titulo{
     font-size: 1rem;
 }
+
 .producto-agendar{
     border: 0;
     background-color: var(--clr-white);
@@ -152,14 +175,17 @@ main{
     border: 2px solid var(--clr-white);
     transition: background-color .2s, color .2s;
 }
+
 .producto-agendar:hover{
     background-color: var(--clr-green);
     color: var(--clr-white);
 }
+  /* barra para cambiar de pagina*/
 .btn-group {
     display: flex;
     justify-content: center;
   }
+  
   .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -170,17 +196,27 @@ main{
     border: none;
     border-radius: 5px;
   }
+  
   .btn:hover {
-    background-color: gray;
+    background-color: gray; /* Cambia el color al pasar el mouse sobre el botón */
   }
+  
+  /* Estilos para los botones de flecha << y >> */
   .btn-arrow {
     background-color: greenyellow;
     font-weight: bold;
     padding: 10px 15px;
   }
+  
   .btn-arrow:hover {
     background-color: greenyellow;
   }
+  
+
+/**carrito**/
+
+/**Logos de la tabla**/
+
 .contenedor-carrito{
     display: flex;
     flex-direction: column;
