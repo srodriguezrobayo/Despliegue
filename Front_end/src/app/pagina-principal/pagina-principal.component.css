@@ -43,18 +43,18 @@ main{
 }
 .producto-agendar{
   border: 0;
-  background-color: var(--clr-white);
+  background-color: #FFFFFF;
   color: #333333;
   padding: .4rem;
   text-transform: uppercase;
   border-radius: 2rem;
   cursor: pointer;
-  border: 2px solid var(--clr-white);
+  border: 2px solid #FFFFFF;
   transition: background-color .2s, color .2s;
 }
 .producto-agendar:hover{
   background-image: linear-gradient(to top, #64ffda, #00b894);
-  color: var(--clr-white);
+  color: #FFFFFF;
 }
 .btn-toolbar {
   display: flex;
