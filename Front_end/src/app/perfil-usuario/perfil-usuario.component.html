@@ -1,3 +1,364 @@
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+.asterisco {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.root {
+  --blue: #2a2185;
+  --white: #fff;
+  --gray: #f5f5f5;
+  --black1: #222;
+  --black2: #999;
+  --greenyellow: #38d39f;
+}
+.body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.container {
+  position: relative;
+  width: 100%;
+}
+.navigation {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background: var(--greenyellow);
+  border-left: 10px solid var(--greenyellow);
+  transition: 0.5s;
+  overflow: hidden;
+}
+.navigation.active {
+  width: 80px;
+}
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.navigation ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.navigation ul li:hover,
+.navigation ul li.hovered {
+  background-color: var(--white);
+}
+.navigation ul li:nth-child(1) {
+  margin-bottom: 40px;
+  pointer-events: none;
+}
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: var(--black1);
+}
+.navigation ul li:hover a,
+.navigation ul li.hovered a {
+  color: var(--blue);
+}
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 75px;
+  text-align: center;
+}
+.navigation ul li a .icon ion-icon {
+  font-size: 1.75rem;
+}
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+  font-size: 20px;
+}
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px var(--white);
+  pointer-events: none;
+}
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px var(--white);
+  pointer-events: none;
+}
+.main {
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  min-height: 100vh;
+  background: var(--white);
+  transition: 0.5s;
+}
+.main.active {
+  width: calc(100% - 80px);
+  left: 80px;
+}
+.topbar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+.user {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.user img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+img.img-fluid {
+  margin-top: 10px;
+}
+.asterisco {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.body {
+  background-color: #efefef;
+}
+.container-nuevo {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.card-nuevo {
+  position: relative;
+  width: 450px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 0px;
+  border-radius: 40px;
+}
+.card-nuevo:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 270px;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to top, #00f2fe, #38d39f);
+  clip-path: circle(400px at 50% -48.5%);
+}
+.header-nuevo {
+  position: relative;
+  height: 265px;
+}
+.main-nuevo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-nuevo .image-nuevo {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: no-repeat center / cover;
+  border: 4px solid #5dc460;
+  margin-bottom: 2px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.imagen{
+  height: 110px;
+  width: 110px;
+}
+.name-nuevo {
+  font-size: 25px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1;
+  margin: 5px 0;
+}
+.content-nuevo {
+  display: flex;
+  padding: 1.7rem 2.5rem 2.6rem 2.5rem;
+}
+.title-nuevo {
+  position: relative;
+  color: #555;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0 0 3px 0;
+  margin-bottom: .9rem;
+  display: inline-block;
+}
+.title-nuevo:after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 50%;
+  background-color: #555;
+  bottom: 0;
+  left: 0;
+}
+.text-nuevo {
+  color: #666;
+  font-weight: 300;
+  line-height: 1.7;
+}
+.buttons-wrap-nuevo {
+  display: flex;
+  margin-top: 5px;
+}
+.follow-wrap-nuevo{
+  flex: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+}
+.follow-wrap-nuevo:hover,
+.share-wrap-nuevo:hover {
+  flex: 5;
+}
+.follow-nuevo {
+  padding: 9.6px 0;
+  width: 100%;
+  background: #38d39f;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 18.1px;
+  margin-right: 3px;
+}
+
+.share-nuevo {
+  padding: 7.6px 0;
+  width: 100%;
+  border: 2px solid #4facfe;
+  color: #4facfe;
+  text-decoration: none;
+  text-align: center;
+  font-size: .7rem;
+}
+.modal-nuevo {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+  opacity: 0;
+  transition: .5s;
+}
+.modal-nuevo img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.3);
+  max-width: 100%;
+  max-height: 100%;
+  transition: .5s;
+}
+
+.modal-nuevo.show-nuevo {
+  opacity: 1;
+  z-index: 99;
+}
+
+.modal-nuevo.show-nuevo img {
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+.close-nuevo {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: .3s;
+}
+.close-nuevo:hover {
+  opacity: .5;
+}
+.close-nuevo:before,
+.close-nuevo:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  border-radius: 1.5px;
+  top: 50%;
+  left: 50%;
+  background-color: #fff;
+}
+.close-nuevo:before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.close-nuevo:after {
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+</style>
 <div class="asterisco">
   <div class="body">
     <div class="root">
