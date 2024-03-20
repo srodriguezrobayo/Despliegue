@@ -27,7 +27,7 @@
                                     <span class="icon">
                                         <ion-icon name="person-circle-outline"></ion-icon>
                                     </span>
-                                    <span class="title">Perfil de Usuario</span>
+                                    <span class="title">Perfil de Empresa</span>
                                 </a>
                             </li>
             
@@ -67,8 +67,6 @@
                                     <div class="main-nuevo" *ngFor="let e of empresa | async">
                                         <div class="image-nuevo">
                                             <img [src]="urlimagen+e.Foto_empresa" class="imagen" alt="perfil"/>
-                                            <!-- <div class="hover-nuevo">
-                                            </div> -->
                                         </div>
                                         <h3 class="name-nuevo">{{e.Nombre_empresa}}</h3>
                                     </div>

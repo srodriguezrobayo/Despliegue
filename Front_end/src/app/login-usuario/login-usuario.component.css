@@ -3,12 +3,10 @@
 	margin: 0;
 	box-sizing: border-box;
 }
-
 .body{
-    font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins', sans-serif;
     overflow: hidden;
 }
-
 .wave{
 	position: fixed;
 	bottom: 0;
@@ -16,7 +14,6 @@
 	height: 100%;
 	z-index: -1;
 }
-
 .container{
     width: 100vw;
     height: 100vh;
@@ -25,39 +22,32 @@
     grid-gap :7rem;
     padding: 0 2rem;
 }
-
 .img{
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 }
-
 .login-content{
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	text-align: center;
 }
-
 .img img{
 	width: 500px;
 }
-
 form{
 	width: 360px;
 }
-
 .login-content img{
     height: 100px;
 }
-
 .login-content h2{
 	margin: 15px 0;
 	color: #333;
 	text-transform: uppercase;
 	font-size: 2.9rem;
 }
-
 .login-content .input-div{
 	position: relative;
     display: grid;
@@ -66,37 +56,22 @@ form{
     padding: 20px 0;
     border-bottom: 2px solid #d9d9d9;
 }
-
 .login-content .input-div.one{
 	margin-top: 0;
 }
-
 .i{
 	color: #d9d9d9;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-
 .i i{
 	transition: .3s;
 }
-
 .input-div > div{
     position: relative;
 	height: 45px;
 }
-
-.input-div > div > h5{
-	position: absolute;
-	left: 10px;
-	top: 50%;
-	transform: translateY(-50%);
-	color: #999;
-	font-size: 18px;
-	transition: .3s;
-}
-
 .input-div:before, .input-div:after{
 	content: '';
 	position: absolute;
@@ -106,28 +81,18 @@ form{
 	background-color: #38d39f;
 	transition: .4s;
 }
-
 .input-div:before{
 	right: 50%;
 }
-
 .input-div:after{
 	left: 50%;
 }
-
 .input-div.focus:before, .input-div.focus:after{
 	width: 50%;
 }
-
-.input-div.focus > div > h5{
-	top: -5px;
-	font-size: 15px;
-}
-
 .input-div.focus > .i > i{
 	color: #38d39f;
 }
-
 .input-div > div > input{
 	position: absolute;
 	left: 0;
@@ -142,11 +107,9 @@ form{
 	color: #555;
 	font-family: 'poppins', sans-serif;
 }
-
 .input-div.pass{
 	margin-bottom: 4px;
 }
-
 a{
 	display: block;
 	text-align: right;
@@ -155,11 +118,9 @@ a{
 	font-size: 0.9rem;
 	transition: .3s;
 }
-
 a:hover{
 	color: #38d39f;
 }
-
 .btn{
 	display: block;
 	width: 100%;
@@ -180,14 +141,11 @@ a:hover{
 .btn:hover{
 	background-position: right;
 }
-
-
 @media screen and (max-width: 1050px){
 	.container{
 		grid-gap: 5rem;
 	}
 }
-
 @media screen and (max-width: 1000px){
 	form{
 		width: 290px;
@@ -202,7 +160,6 @@ a:hover{
 		width: 400px;
 	}
 }
-
 @media screen and (max-width: 900px){
 	.container{
 		grid-template-columns: 1fr;
@@ -220,24 +177,19 @@ a:hover{
 		justify-content: center;
 	}
 }
-/* Agrega estilos para las nuevas opciones de usuario */
 .options {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
 }
-
 .options label {
     display: block;
     font-size: 1rem;
     margin-right: 10px;
 }
-
-/* Estilos adicionales para los radio buttons */
 .options input[type="radio"] {
-    display: none; /* Oculta los radio buttons predeterminados */
+    display: none;
 }
-
 .options input[type="radio"] + label {
     cursor: pointer;
     padding: 8px;
@@ -245,32 +197,26 @@ a:hover{
     border-radius: 5px;
     transition: background-color 0.3s;
 }
-
 .options input[type="radio"]:checked + label {
     background-color: #38d39f;
     color: #fff;
 }
-
-/* Añade un estilo para separar visualmente las opciones del resto del formulario */
 .login-content h2 {
     margin-bottom: 15px;
 }
-
 .login-content .input-div .info {
-	font-size: 1.1rem;
-	color: #555; 
-	font-weight: bold; 
-	margin-bottom: 20px;
-	padding-bottom: 20px;
-	display: block;
-  }
-  
-  .input-div .input {
-	  margin-top: 25px; 
-	  padding-top: 25px; 
-  }
-  
-  .input-div i {
-	  margin-top: 25px; 
-	  padding-top: 25px;
-  }
+  font-size: 1.1rem;
+  color: #555; 
+  font-weight: bold; 
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  display: block;
+}
+.input-div .input {
+	margin-top: 25px; 
+	padding-top: 25px; 
+}
+.input-div i {
+	margin-top: 25px; 
+	padding-top: 25px;
+}

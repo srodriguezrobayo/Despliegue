@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 <div class="root">
   <div id="asterisco">
       <div class="body">
@@ -70,7 +63,6 @@
                       <br>
                       <div class="contenedor-carrito" *ngFor="let todo of (todo | async); let i = index">
                         <div *ngIf="todo.Estatus === 'Espera'">
-                            <p class="carrito-vacio">Tu carrito está vacío. <i class="bi bi-emoji-frown"></i></p>
                             <div class="carrito-productos">
                                 <div class="carrito-producto">
                                     <img class="carrito-producto-imagen"   [src]="urlimagen+todo.Foto_empresa" alt="imagen producto">
@@ -119,7 +111,6 @@
                     <br>
                     <div class="contenedor-carrito" *ngFor="let todo of (todo | async); let i = index">
                         <div *ngIf="todo.Estatus === 'Aceptada'">
-                            <p class="carrito-vacio">Tu carrito está vacío. <i class="bi bi-emoji-frown"></i></p>
                             <div class="carrito-productos">
                                 <div class="carrito-producto">
                                     <img class="carrito-producto-imagen"   [src]="urlimagen+todo.Foto_empresa" alt="imagen producto">
@@ -171,9 +162,7 @@
                     <h3>Rechazadas</h3>
                     <br>
                     <div class="contenedor-carrito" *ngFor="let todo of (todo | async); let i = index">
-                        <div *ngIf="todo.Estatus === 'Rechazada'">
-                            <p class="carrito-vacio">Tu carrito está vacío. <i class="bi bi-emoji-frown"></i></p>
-                            <div class="carrito-productos">
+                        <div *ngIf="todo.Estatus === 'Rechazada'">                            <div class="carrito-productos">
                                 <div class="carrito-producto">
                                     <img class="carrito-producto-imagen"   [src]="urlimagen+todo.Foto_empresa" alt="imagen producto">
                                     <div class="carrito-producto-cantiidad">

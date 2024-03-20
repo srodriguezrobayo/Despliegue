@@ -56,7 +56,6 @@
         <br>
         <div class="contenedor-carrito" *ngFor="let pendiente of (pendiente | async); let i = index">
           <div *ngIf="pendiente.Estatus === 'Espera'">
-            <p class="carrito-vacio">Tu carrito está vacío.<i class="bi bi-emoji-frown"></i></p>
             <div class="carrito-productos">
                 <div class="carrito-producto">
                   <img class="carrito-producto-imagen" [src]="urlimagen+pendiente.Foto_cliente" alt="">
@@ -106,7 +105,6 @@
       <br>
       <div class="contenedor-carrito" *ngFor="let pendiente of (pendiente | async); let i = index">
         <div *ngIf="pendiente.Estatus === 'Aceptada'">
-          <p class="carrito-vacio">Tu carrito está vacío.<i class="bi bi-emoji-frown"></i></p>
           <div class="carrito-productos">
               <div class="carrito-producto">
                 <img class="carrito-producto-imagen" [src]="urlimagen+pendiente.Foto_cliente" alt="">
