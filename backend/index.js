@@ -1690,3 +1690,23 @@ app.put("/restaurar_contrasena/admin/:Nom_empleado", (req, res) => {
         res.json('Se actualizó correctamente la contraseña'); 
     });
 });
+
+app.get("/tiempo/:Empresa_Nit_Empresa/:Fecha_reservacion/:Hora_reservacion", (req, res) => {
+    const { Empresa_Nit_Empresa, Fecha_reservacion, Hora_reservacion } = req.params;
+
+    const query = `SELECT * FROM reservacion WHERE Empresa_Nit_Empresa = '${Empresa_Nit_Empresa}' AND Fecha_reservacion = '${Fecha_reservacion}' AND Hora_reservacion = '${Hora_reservacion}';`;
+
+    conexion.query(query, (error, resultado) => {
+        if (error) {
+            console.error(error.message);
+            res.status(500).json({ message: 'Error en el servidor' });
+            return;
+        }
+
+        if (resultado.length > 0) {
+            res.json({message: 'Ya está reservado'});
+        } else {
+            res.json({message: 'Se puede escoger'});
+        }
+    });
+});
