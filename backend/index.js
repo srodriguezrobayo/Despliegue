@@ -320,8 +320,8 @@ app.post('/cliente/registro', (req, res) => {
             return;
         } else {
             // Si el cliente no está registrado, procede con la inserción
-            const sql = 'INSERT INTO cliente (id_Cliente, Nombre_cliente, Correoelectronico_cliente, Password_cliente, Telefono_cliente, Genero_idGenero, Ciudad_id_Ciudad, Foto_cliente) VALUES (?,?,?,md5(?),?,?,?,"user.png")';
-            conexion.query(sql, [id_Cliente, Nombre_cliente, Correoelectronico_cliente, Password_cliente, Telefono_cliente, Genero_idGenero, Ciudad_id_Ciudad], (error, resultado) => {
+            const sql = 'INSERT INTO cliente (Nombre_cliente, Correoelectronico_cliente, Password_cliente, Telefono_cliente, Genero_idGenero, Ciudad_id_Ciudad, Foto_cliente) VALUES (?,?,md5(?),?,?,?,"user.png")';
+            conexion.query(sql, [Nombre_cliente, Correoelectronico_cliente, Password_cliente, Telefono_cliente, Genero_idGenero, Ciudad_id_Ciudad], (error, resultado) => {
                 if (error) {
                     console.error('Error al registrar', error);
                     res.status(500).json({ message: 'Error al registrar' });
