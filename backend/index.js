@@ -3,8 +3,16 @@ const multer = require('multer');
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
 const path = require('path');
+const cors = require('cors');
 
 const app = express();
+
+app.use(cors({
+    origin: 'https://d10hebfxsclsy2.cloudfront.net',
+    methods: 'GET,POST,PUT,DELETE',
+    credentials: true
+  }));
+  
 
 app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
