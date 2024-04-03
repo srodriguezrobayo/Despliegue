@@ -781,7 +781,6 @@ app.get('/departamento/:id', (req, res) => {
 
 app.post ('/departamento/agregar',(req, res) => {
     const departamento = {
-        idDepartamento: req.body.idDepartamento,
         nombre_departamento: req.body.nombre_departamento
     }
     
@@ -857,7 +856,6 @@ app.get('/ciudad/:id', (req, res) => {
 
 app.post ('/ciudad/agregar',(req, res) => {
     const ciudad = {
-        id_Ciudad: req.body.id_Ciudad,
         nombre_ciudad: req.body.nombre_ciudad,
         Departamento_idDepartamento: req.body.Departamento_idDepartamento
     }
@@ -1691,10 +1689,10 @@ app.put("/restaurar_contrasena/admin/:Nom_empleado", (req, res) => {
     });
 });
 
-app.get("/tiempo/:Empresa_Nit_Empresa/:Fecha_reservacion/:Hora_reservacion", (req, res) => {
-    const { Empresa_Nit_Empresa, Fecha_reservacion, Hora_reservacion } = req.params;
+app.get("/tiempo/:Empresa_Nit_Empresa/:Fecha_reservacion", (req, res) => {
+    const { Empresa_Nit_Empresa, Fecha_reservacion} = req.params;
 
-    const query = `SELECT * FROM reservacion WHERE Empresa_Nit_Empresa = '${Empresa_Nit_Empresa}' AND Fecha_reservacion = '${Fecha_reservacion}' AND Hora_reservacion = '${Hora_reservacion}';`;
+    const query = `SELECT * FROM reservacion WHERE Empresa_Nit_Empresa = '${Empresa_Nit_Empresa}' AND Fecha_reservacion = '${Fecha_reservacion}'AND Estatus = 'Aceptada';`;
 
     conexion.query(query, (error, resultado) => {
         if (error) {
@@ -1704,7 +1702,7 @@ app.get("/tiempo/:Empresa_Nit_Empresa/:Fecha_reservacion/:Hora_reservacion", (re
         }
 
         if (resultado.length > 0) {
-            res.json({message: 'Ya está reservado'});
+            res.json({message:'Ya está reservado'});
         } else {
             res.json({message: 'Se puede escoger'});
         }
